@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{04BBEB1C-549B-4F5D-9C8F-57EC692C4409}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TotalFastFood.ERP.FrenteDeCaixa.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TotalFastFood_ERP_FrenteDeCaixa">
+        <MSBuild Projects="TotalFastFood.ERP.FrenteDeCaixa.dproj"/>
+    </Target>
+    <Target Name="TotalFastFood_ERP_FrenteDeCaixa:Clean">
+        <MSBuild Projects="TotalFastFood.ERP.FrenteDeCaixa.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TotalFastFood_ERP_FrenteDeCaixa:Make">
+        <MSBuild Projects="TotalFastFood.ERP.FrenteDeCaixa.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TotalFastFood_ERP_FrenteDeCaixa"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TotalFastFood_ERP_FrenteDeCaixa:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TotalFastFood_ERP_FrenteDeCaixa:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

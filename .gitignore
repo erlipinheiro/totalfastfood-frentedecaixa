@@ -1,0 +1,47 @@
+# Arquivos de compilação e temporários
+*.dcu
+*.obj
+*.o
+*.bak
+*.~*
+*.tmp
+*.$$$
+
+# Executáveis e binários
+*.exe
+*.dll
+*.bpl
+*.bpi
+*.dcp
+
+# Arquivos de recursos (podem ser ignorados se não usados ou gerados)
+*.res
+*.rc
+
+# Pastas de saída de compilação (ajuste conforme a sua pasta de build)
+*/Win32/
+*/Win64/
+*/Debug/
+*/Release/
+*/bin/
+*/bpl/
+
+# Arquivos de projeto e IDE (exclua o que você não usa)
+*.dproj.user
+*.dpk.user
+*.dsk
+*.dpr.user
+*.cfg
+*.local
+
+# Arquivos específicos do IDE/Visual Studio
+# .vs/
+# .idea/
+
+# Para Delphi XE2+ (LiveBindings, Deployment)
+*.livebinding
+*.deployproj
+
+# C++ Builder (se aplicável)
+*.pch
+*.bcb

@@ -1,0 +1,69 @@
+object frmMensagem: TfrmMensagem
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'Mensagem'
+  ClientHeight = 768
+  ClientWidth = 1024
+  Color = 887505
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 679
+    Width = 1024
+    Height = 89
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    object btnOK: TPanel
+      Left = 419
+      Top = -1
+      Width = 185
+      Height = 90
+      BevelOuter = bvNone
+      Caption = 'OK'
+      Color = 9803052
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 14737560
+      Font.Height = -64
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnOKClick
+    end
+  end
+  object Memo1: TMemo
+    Left = 0
+    Top = 0
+    Width = 1024
+    Height = 679
+    Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Lines.Strings = (
+      'Memo1')
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = Timer1Timer
+    Left = 512
+    Top = 528
+  end
+end

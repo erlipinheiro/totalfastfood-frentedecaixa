@@ -1,0 +1,59 @@
+unit BematechMP2032;
+
+interface
+
+function IniciaPorta( Porta: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function FechaPorta: integer; stdcall; external 'MP2032.DLL';
+function BematechTX( BufTrans: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ComandoTX( BufTrans: AnsiString; TamBufTrans: integer ): integer; stdcall; external 'MP2032.DLL';
+function CaracterGrafico( BufTrans: AnsiString; TamBufTrans: integer ): integer; stdcall; external 'MP2032.DLL';
+function DocumentInserted: integer; stdcall; external 'MP2032.DLL';
+function Le_Status: integer; stdcall; external 'MP2032.DLL';
+function AutenticaDoc( texto: AnsiString; tempo: integer ): integer; stdcall; external 'MP2032.DLL';
+function Le_Status_Gaveta: integer; stdcall; external 'MP2032.DLL';
+function ConfiguraTamanhoExtrato( NumeroLinhas: Integer ): integer; stdcall; external 'MP2032.DLL';
+function HabilitaExtratoLongo( Flag: Integer ): integer; stdcall; external 'MP2032.DLL';
+function HabilitaEsperaImpressao( Flag: Integer ): integer; stdcall; external 'MP2032.DLL';
+function EsperaImpressao: integer; stdcall; external 'MP2032.DLL';
+function ConfiguraModeloImpressora( ModeloImpressora: integer ): integer; stdcall; external 'MP2032.DLL';
+function AcionaGuilhotina( Modo: integer ): integer; stdcall; external 'MP2032.DLL';
+function FormataTX (BufTras: AnsiString; TpoLtra: integer; Italic: integer; Sublin: integer; expand: integer; enfat: integer ): integer; stdcall; external 'MP2032.DLL';
+function HabilitaPresenterRetratil( iFlag: integer ): integer; stdcall; external 'MP2032.DLL';
+function ProgramaPresenterRetratil( iTempo: integer ): integer; stdcall; external 'MP2032.DLL';
+function VerificaPapelPresenter: integer; stdcall; external 'MP2032.DLL';
+
+// Função para Configuração dos Códigos de Barras
+
+function ConfiguraCodigoBarras( Altura: integer; Largura: integer; PosicaoCaracteres: integer; Fonte: integer; Margem: integer ): integer; stdcall; external 'MP2032.DLL';
+
+// Funções para impressão dos códigos de barras
+
+function ImprimeCodigoBarrasUPCA( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasUPCE( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasEAN13( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasEAN8( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasCODE39( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasCODE93( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasCODE128( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasITF( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasCODABAR( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasISBN( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasMSI( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasPLESSEY( Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+function ImprimeCodigoBarrasPDF417( NivelCorrecaoErros: integer; Altura: integer; Largura: integer; Colunas: integer; Codigo: AnsiString ): integer; stdcall; external 'MP2032.DLL';
+
+// Funções para impressão de BitMap
+
+function ImprimeBitmap ( name: AnsiString; mode: integer): integer; stdcall; external 'MP2032.DLL';
+function ImprimeBmpEspecial ( name: AnsiString; xScale: integer; yScale: integer; angle: integer): integer; stdcall; external 'MP2032.DLL';
+function AjustaLarguraPapel ( width: integer): integer; stdcall; external 'MP2032.DLL';
+function SelectDithering ( mode: integer): integer; stdcall; external 'MP2032.DLL';
+function PrinterReset : integer; stdcall; external 'MP2032.DLL';
+function LeituraStatusEstendido        ( A: array of byte ): integer; stdcall; external 'MP2032.DLL';
+function IoControl        ( flag: Integer; mode : Boolean ): integer; stdcall; external 'MP2032.DLL';
+
+
+implementation
+
+end.
+ 
