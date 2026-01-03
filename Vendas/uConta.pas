@@ -14,7 +14,7 @@ uses
   ACBrBase, ACBrTEFD, ACBrTEFDClass, System.TypInfo, ACBrMail, ACBrDFe, ACBrNFe,
   ACBrNFeDANFEClass, ACBrNFeDANFeESCPOS, ACBrPosPrinter, ACBrDFeException,
   System.Math, ACBrDFeSSL, IdBaseComponent, ACBRValidador,
-  IdComponent, IdTCPConnection, ACBrNFeDANFEFRDM, ACBrNFeDANFEFR;
+  IdComponent, IdTCPConnection;
 
 type
   TEstadoEcfSimulado = (tpsLivre, tpsVenda, tpsSubTotal, tpsTotalPagar, tpsPagamento, tpsRelatorio);
@@ -65,7 +65,6 @@ type
     TimerInatividade: TTimer;
     timerAtualizaPainelItens: TTimer;
     ACBrTEFD1: TACBrTEFD;
-    ACBrMail1: TACBrMail;
     btnPromocoes: TPanel;
     pnlPromocao: TPanel;
     btnPagamento: TImage;
@@ -3212,7 +3211,7 @@ begin
               flCancelaCupom := True;
             end;
           end;
-
+ {
           if frmPrincipal.ACBrIBPTax1.Procurar(FieldByName('NCM').AsString, ex, descricao, tabela, aliqFedNac, aliqFedImp, aliqEstadual, aliqMunicipal, False) then
           begin
 //            ChaveIBPT :=
@@ -3223,7 +3222,7 @@ begin
             if aliqMunicipal > 0 then
               ValorAproximadoMunicipal := ValorAproximadoMunicipal + (FieldByName('qtde').AsFloat * FieldByName('vlProduto').AsFloat) * aliqMunicipal / 100;
           end;
-
+}
           Next;
         end;
       except

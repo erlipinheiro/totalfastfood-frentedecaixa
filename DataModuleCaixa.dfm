@@ -1,5 +1,4 @@
 object dmCaixa: TdmCaixa
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   Height = 651
@@ -361,10 +360,6 @@ object dmCaixa: TdmCaixa
     ProviderName = 'dspProdutoObservacoes'
     Left = 588
     Top = 279
-  end
-  object FDPhysMSSQLDriverLink1: TFDPhysMSSQLDriverLink
-    Left = 72
-    Top = 104
   end
   object FDTransaction1: TFDTransaction
     Connection = dbTotalFastFood
@@ -1049,35 +1044,6 @@ object dmCaixa: TdmCaixa
     DANFE = ACBrNFeDANFeESCPOS1
     Left = 976
     Top = 24
-  end
-  object ACBrNFeDANFCEFR1: TACBrNFeDANFCEFR
-    MostraPreview = False
-    Sistema = 'TotalFastFood'
-    MargemInferior = 8.000000000000000000
-    MargemSuperior = 8.000000000000000000
-    MargemEsquerda = 6.000000000000000000
-    MargemDireita = 5.100000000000000000
-    ExpandeLogoMarcaConfig.Altura = 0
-    ExpandeLogoMarcaConfig.Esquerda = 0
-    ExpandeLogoMarcaConfig.Topo = 0
-    ExpandeLogoMarcaConfig.Largura = 0
-    ExpandeLogoMarcaConfig.Dimensionar = False
-    ExpandeLogoMarcaConfig.Esticar = True
-    CasasDecimais.Formato = tdetInteger
-    CasasDecimais.qCom = 2
-    CasasDecimais.vUnCom = 2
-    CasasDecimais.MaskqCom = ',0.00'
-    CasasDecimais.MaskvUnCom = ',0.00'
-    CasasDecimais.Aliquota = 2
-    CasasDecimais.MaskAliquota = ',0.00'
-    ACBrNFe = ACBrNFe1
-    TipoDANFE = tiNFCe
-    ImprimeQRCodeLateral = True
-    ImprimeLogoLateral = True
-    BorderIcon = [biSystemMenu, biMinimize, biMaximize]
-    ThreadSafe = False
-    Left = 976
-    Top = 152
   end
   object ACBrNFeDANFeESCPOS1: TACBrNFeDANFeESCPOS
     Sistema = 'Projeto ACBr - www.projetoacbr.com.br'

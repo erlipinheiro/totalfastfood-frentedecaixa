@@ -11,11 +11,9 @@
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlPrincipal: TPanel
     Left = 0
@@ -1357,11 +1355,6 @@
       '    group by rollup (DescricaoSubGrupo, Descricao)')
     Left = 95
     Top = 210
-  end
-  object ACBrIBPTax1: TACBrIBPTax
-    ProxyPort = '8080'
-    Left = 96
-    Top = 446
   end
   object IdSMTP1: TIdSMTP
     Host = 'dbserver.brasilwww.com.br'

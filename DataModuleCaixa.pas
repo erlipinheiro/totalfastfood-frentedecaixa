@@ -3,21 +3,21 @@ unit DataModuleCaixa;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DBXMSSQL, Data.DB, Datasnap.DBClient,
+  System.SysUtils, System.Classes, Data.DB, Datasnap.DBClient,
   SimpleDS, Data.SqlExpr, Data.FMTBcd, System.Variants, Datasnap.Provider,
   Forms, ACBrBase, ACBrExtenso, uClasses, ACBrBAL,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Comp.DataSet,
-  FireDAC.Phys.ODBCBase, FireDAC.Phys.MSSQL, FireDAC.Comp.UI, FireDAC.VCLUI.Wait,
-  FireDAC.VCLUI.Error, Vcl.Graphics, Vcl.ExtCtrls, IdBaseComponent, IdComponent,
+  Vcl.Graphics, Vcl.ExtCtrls, IdBaseComponent, IdComponent,
   IdTCPConnection, IdTCPClient, IdExplicitTLSClientServerBase, IdFTP,
-  FireDAC.Phys.MSSQLDef, FireDAC.Moni.Base, FireDAC.Moni.RemoteClient, ACBrPosPrinter,
+  ACBrPosPrinter,
   Constantes, pcnConversao, FireDAC.ConsoleUI.Wait, ACBrNFeDANFEClass,
   ACBrNFeDANFeESCPOS, ACBrDFe, ACBrNFe, ACBrValidador, DateUtils,
-  ACBrNFeDANFEFRDM, ACBrNFeDANFEFR, ACBrSocket, ACBrIBPTax, ACBrDFeReport,
-  ACBrDFeDANFeReport;
+  ACBrSocket, ACBrIBPTax, ACBrDFeReport,
+  ACBrDFeDANFeReport, FireDAC.Comp.UI, FireDAC.Moni.Base,
+  FireDAC.Moni.RemoteClient;
 
 type
   TdmCaixa = class(TDataModule)
@@ -39,7 +39,6 @@ type
     qryProdutoObservacoes: TFDQuery;
     dspProdutoObservacoes: TDataSetProvider;
     cdsProdutoObservacoes: TClientDataSet;
-    FDPhysMSSQLDriverLink1: TFDPhysMSSQLDriverLink;
     FDTransaction1: TFDTransaction;
     qryItens: TFDQuery;
     qryConferenciaTotalizado: TFDQuery;
@@ -85,7 +84,6 @@ type
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     qryDescontos: TFDQuery;
     ACBrNFe1: TACBrNFe;
-    ACBrNFeDANFCEFR1: TACBrNFeDANFCEFR;
     ACBrNFeDANFeESCPOS1: TACBrNFeDANFeESCPOS;
     procedure DataModuleDestroy(Sender: TObject);
     procedure IdFTP1Status(ASender: TObject; const AStatus: TIdStatus;

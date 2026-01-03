@@ -12,7 +12,6 @@ object frmConta: TfrmConta
   Font.Name = 'Tahoma'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Touch.InteractiveGestures = []
   Touch.InteractiveGestureOptions = []
   Touch.ParentTabletOptions = False
@@ -22,7 +21,6 @@ object frmConta: TfrmConta
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlProdutosPrincipal: TPanel
     Left = 389
@@ -2083,16 +2081,5 @@ object frmConta: TfrmConta
     OnMudaEstadoResp = ACBrTEFD1MudaEstadoResp
     Left = 200
     Top = 144
-  end
-  object ACBrMail1: TACBrMail
-    Host = '127.0.0.1'
-    Port = '25'
-    SetSSL = False
-    SetTLS = False
-    Attempts = 3
-    DefaultCharset = UTF_8
-    IDECharset = CP1252
-    Left = 200
-    Top = 96
   end
 end

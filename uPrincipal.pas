@@ -14,9 +14,8 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.Actions, ACBrECF, ACBrSocket,
   uMensagensErro, System.Inifiles, ACBrIBPTax,
   IdExplicitTLSClientServerBase, IdMessageClient, IdSMTPBase, IdSMTP,
-  FireDAC.UI.Intf, FireDAC.VCLUI.Error, FireDAC.Comp.UI,
   ACBrPosPrinter, ACBrNFeDANFEClass, ACBrNFeDANFeESCPOS, ACBrDFe,
-  ACBrNFe, ProtocoloBRMidia, IdExceptionCore, ACBrValidador, System.UITypes,
+  ACBrNFe, IdExceptionCore, ACBrValidador, System.UITypes,
   Vcl.Imaging.jpeg;
 
 type
@@ -53,7 +52,6 @@ type
     Label5: TLabel;
     edtEstadoECF: TEdit;
     btnSangria: TPanel;
-    ACBrIBPTax1: TACBrIBPTax;
     IdSMTP1: TIdSMTP;
     pnlLogos: TPanel;
     Image1: TImage;
@@ -126,9 +124,9 @@ type
 
 var
   frmPrincipal: TfrmPrincipal;
-  ClientThread1: TClientThread;
+//  ClientThread1: TClientThread;
   // user name & ID
-  ClientData1: TClient;
+//  ClientData1: TClient;
 
 Const
   Estados : array[TACBrECFEstado] of string =
@@ -763,7 +761,7 @@ begin
   if tcpclienteSenha.Connected then
     tcpclienteSenha.Disconnect;
 
-  ClientThread1 := nil;
+//  ClientThread1 := nil;
 
   if ACBrECF1.Ativo then
     ACBrECF1.Desativar;
@@ -843,8 +841,10 @@ var
 begin
   if not ProgramaInicializado then
   begin
+{
     if dmCaixa.Estacao.ChamarSenha then
     begin
+
       tcpclienteSenha.Host := dmCaixa.Estacao.NomeServidorSenha;
       tcpclienteSenha.Port := dmCaixa.Estacao.PortaServidorSenha;
       try
@@ -877,7 +877,7 @@ begin
         end;
       end;
     end;
-
+ }
     frmPergunta.BoundsRect := Screen.Monitors[dmCaixa.NumeroMonitor].BoundsRect;
     frmMensagem.NumeroMonitor := dmCaixa.NumeroMonitor;
     frmMensagem.BoundsRect := Screen.Monitors[dmCaixa.NumeroMonitor].BoundsRect;
@@ -1067,6 +1067,7 @@ end;
 
 procedure TfrmPrincipal.EnviarSenha(const ASenha: string);
 begin
+{
   try
     if not tcpclienteSenha.Connected then
       tcpclienteSenha.Connect;
@@ -1089,6 +1090,7 @@ begin
     on e : exception do
       frmMensagem.MostraMensagemErro('Ocorreu o seguinte erro enviando senha. ' + sLineBreak + e.Message);
   end;
+  }
 end;
 
 {procedure TfrmPrincipal.EurekaLogEvents1CustomDataRequest(

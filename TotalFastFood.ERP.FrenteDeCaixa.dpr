@@ -49,7 +49,7 @@ uses
   uSelecionaPromocoes in 'Vendas\uSelecionaPromocoes.pas' {frmSelecionaPromocoes},
   uBaixarPedidos in 'Vendas\uBaixarPedidos.pas' {frmBaixarPedidos},
   uGerarNFE in '..\Compartilhados\uGerarNFE.pas',
-  ProtocoloBRMidia in '..\..\..\BRMidia\Compartilhados\ProtocoloBRMidia.pas',
+//  ProtocoloBRMidia in '..\..\..\BRMidia\Compartilhados\ProtocoloBRMidia.pas',
   uUnicaInstancia in 'uUnicaInstancia.pas',
   uGerenciaNFCes in 'Vendas\uGerenciaNFCes.pas' {frmGerenciarNFCes},
   uDadosConsumidor in 'Vendas\uDadosConsumidor.pas' {frmDadosConsumidor},

@@ -111,9 +111,9 @@ begin
     dmCaixa.ACBrNFe1.NotasFiscais.LoadFromFile(sArquivo, False);
     if dmCaixa.ACBrNFe1.NotasFiscais.Items[0].Confirmada then
     begin
-      dmCaixa.ACBrNFeDANFCEFR1.Impressora := dmCaixa.Estacao.Impressora.FilaImpressao;
-      dmCaixa.ACBrNFeDANFCEFR1.FastFile   := dmCaixa.Estacao.Impressora.ArquivoDanfe;
-      dmCaixa.ACBrNFe1.DANFE := dmCaixa.ACBrNFeDANFCEFR1;
+//      dmCaixa.ACBrNFeDANFCEFR1.Impressora := dmCaixa.Estacao.Impressora.FilaImpressao;
+//      dmCaixa.ACBrNFeDANFCEFR1.FastFile   := dmCaixa.Estacao.Impressora.ArquivoDanfe;
+//      dmCaixa.ACBrNFe1.DANFE := dmCaixa.ACBrNFeDANFCEFR1;
 
       dmCaixa.ACBrNFe1.NotasFiscais.Items[0].Imprimir;
     end;
